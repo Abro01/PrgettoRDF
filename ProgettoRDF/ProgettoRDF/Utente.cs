@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ProgettoRDF
 {
-    static class Login
+    static class Utente
     {
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
@@ -16,7 +16,7 @@ namespace ProgettoRDF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }
