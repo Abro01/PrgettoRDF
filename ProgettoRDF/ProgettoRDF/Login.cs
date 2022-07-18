@@ -18,6 +18,9 @@ namespace ProgettoRDF
         MySqlCommand command;
         MySqlDataAdapter da;
         DataTable dt;
+
+        public static string emailIN, passwordIN;
+
         public Login()
         {
             InitializeComponent();
@@ -31,8 +34,6 @@ namespace ProgettoRDF
 
         private void Accedi_Click(object sender, EventArgs e)
         {
-            string emailIN, passwordIN;
-
             emailIN = textEmail.Text;
             passwordIN = textPassword.Text;
 
@@ -46,10 +47,49 @@ namespace ProgettoRDF
                 da.Fill(dt);
                 dataGridView1.DataSource = dt.DefaultView;
                 con.cn.Close();
+                string query = "SELECT * FROM utenti WHERE email = '" + textEmail.Text + "' AND password = '" + textPassword.Text + "'";
+                MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+
+                sda.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    emailIN = textEmail.Text;
+                    passwordIN = textPassword.Text;
+
+                    MenuForm form2 = new MenuForm();
+                    form2.Show();
+                    this.Hide();
+                }else
+                {
+                    MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textEmail.Clear();
+                    textPassword.Clear();
+
+                    textEmail.Focus();
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            textEmail.Clear();
+            textPassword.Clear();
+
+            textEmail.Focus();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }
