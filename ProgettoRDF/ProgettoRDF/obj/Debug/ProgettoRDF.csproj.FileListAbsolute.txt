@@ -22,3 +22,4 @@ C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\
 C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.CopyComplete
 C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.exe
 C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.pdb
+C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuForm.resources

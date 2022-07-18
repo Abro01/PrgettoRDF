@@ -17,7 +17,7 @@ namespace ProgettoRDF
         myDBconnection con = new myDBconnection();
         MySqlCommand command;
         MySqlDataAdapter da;
-        DataTable dt;
+        DataTable dt=new DataTable();
 
         public static string emailIN, passwordIN;
 
@@ -32,6 +32,14 @@ namespace ProgettoRDF
 
         }
 
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            textEmail.Clear();
+            textPassword.Clear();
+
+            textEmail.Focus();
+        }
+
         private void Accedi_Click(object sender, EventArgs e)
         {
             emailIN = textEmail.Text;
@@ -40,13 +48,13 @@ namespace ProgettoRDF
             try
             {
                 con.cn.Open();
-                command = new MySqlCommand("Select * from utenti", con.cn);
+                /*command = new MySqlCommand("Select * from utenti", con.cn);
                 command.ExecuteNonQuery();
                 dt = new DataTable();
                 da = new MySqlDataAdapter(command);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt.DefaultView;
-                con.cn.Close();
+                con.cn.Close();*/
                 string query = "SELECT * FROM utenti WHERE email = '" + textEmail.Text + "' AND password = '" + textPassword.Text + "'";
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
 
@@ -57,10 +65,11 @@ namespace ProgettoRDF
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
 
-                    MenuForm form2 = new MenuForm();
-                    form2.Show();
+                    MenuForm form2 = new MenuForm(textEmail, textPassword);
+                    form2.ShowDialog();
                     this.Hide();
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Dati inseriti errati", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textEmail.Clear();
@@ -68,26 +77,23 @@ namespace ProgettoRDF
 
                     textEmail.Focus();
                 }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            textEmail.Clear();
-            textPassword.Clear();
-
-            textEmail.Focus();
+            finally
+            {
+                con.cn.Close();
+            }
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult res;
             res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(res == DialogResult.Yes)
+            if (res == DialogResult.Yes)
             {
                 Application.Exit();
             }

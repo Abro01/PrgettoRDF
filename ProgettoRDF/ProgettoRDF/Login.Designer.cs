@@ -28,31 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Accedi = new System.Windows.Forms.Button();
             this.textEmail = new System.Windows.Forms.TextBox();
             this.textPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Clear = new System.Windows.Forms.Button();
-            this.Exit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Clear = new ProgettoRDF.Elementi.RJButton();
+            this.Exit = new ProgettoRDF.Elementi.RJButton();
+            this.Accedi = new ProgettoRDF.Elementi.RJButton();
             this.SuspendLayout();
-            // 
-            // Accedi
-            // 
-            this.Accedi.Location = new System.Drawing.Point(254, 285);
-            this.Accedi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Accedi.Name = "Accedi";
-            this.Accedi.Size = new System.Drawing.Size(153, 82);
-            this.Accedi.TabIndex = 0;
-            this.Accedi.Text = "Login";
-            this.Accedi.UseVisualStyleBackColor = true;
-            this.Accedi.Click += new System.EventHandler(this.Accedi_Click);
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(280, 46);
+            this.textEmail.Location = new System.Drawing.Point(280, 57);
             this.textEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(148, 26);
@@ -69,86 +57,103 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 51);
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(58, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 20);
+            this.label1.Size = new System.Drawing.Size(120, 39);
             this.label1.TabIndex = 3;
-            this.label1.Text = "email";
+            this.label1.Text = "EMAIL";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 120);
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(58, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(180, 39);
             this.label2.TabIndex = 4;
-            this.label2.Text = "password";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(666, 46);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1376, 231);
-            this.dataGridView1.TabIndex = 5;
+            this.label2.Text = "PASSWORD";
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(427, 195);
+            this.Clear.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.Clear.FlatAppearance.BorderSize = 0;
+            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.Color.White;
+            this.Clear.Location = new System.Drawing.Point(398, 199);
             this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(90, 49);
-            this.Clear.TabIndex = 6;
+            this.Clear.Size = new System.Drawing.Size(162, 45);
+            this.Clear.TabIndex = 8;
             this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.UseVisualStyleBackColor = false;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(140, 195);
+            this.Exit.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.Exit.FlatAppearance.BorderSize = 0;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(122, 199);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(90, 49);
-            this.Exit.TabIndex = 7;
+            this.Exit.Size = new System.Drawing.Size(162, 45);
+            this.Exit.TabIndex = 9;
             this.Exit.Text = "Exit";
-            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.UseVisualStyleBackColor = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // Accedi
+            // 
+            this.Accedi.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.Accedi.FlatAppearance.BorderSize = 0;
+            this.Accedi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Accedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Accedi.ForeColor = System.Drawing.Color.White;
+            this.Accedi.Location = new System.Drawing.Point(266, 298);
+            this.Accedi.Name = "Accedi";
+            this.Accedi.Size = new System.Drawing.Size(162, 45);
+            this.Accedi.TabIndex = 10;
+            this.Accedi.Text = "Login";
+            this.Accedi.UseVisualStyleBackColor = false;
+            this.Accedi.Click += new System.EventHandler(this.Accedi_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 565);
+            this.BackColor = System.Drawing.Color.Blue;
+            this.ClientSize = new System.Drawing.Size(698, 457);
+            this.Controls.Add(this.Accedi);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Clear);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textEmail);
-            this.Controls.Add(this.Accedi);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Accedi;
         private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.Button Exit;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Elementi.RJButton Clear;
+        private Elementi.RJButton Exit;
+        private Elementi.RJButton Accedi;
     }
 }
 
