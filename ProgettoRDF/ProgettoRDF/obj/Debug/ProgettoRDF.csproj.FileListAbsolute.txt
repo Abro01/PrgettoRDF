@@ -1,0 +1,13 @@
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.AssemblyReference.cache
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Login.resources
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Properties.Resources.resources
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Registrazione.resources
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.GenerateResource.cache
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.CoreCompileInputs.cache
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\bin\Debug\ProgettoRDF.exe.config
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\bin\Debug\ProgettoRDF.exe
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\bin\Debug\ProgettoRDF.pdb
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\bin\Debug\MySql.Data.dll
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.csproj.CopyComplete
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.exe
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.pdb
