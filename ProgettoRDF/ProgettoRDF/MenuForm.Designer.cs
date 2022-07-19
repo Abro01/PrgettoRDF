@@ -35,9 +35,10 @@
             // 
             // btProva
             // 
-            this.btProva.Location = new System.Drawing.Point(319, 388);
+            this.btProva.Location = new System.Drawing.Point(225, 211);
+            this.btProva.Margin = new System.Windows.Forms.Padding(2);
             this.btProva.Name = "btProva";
-            this.btProva.Size = new System.Drawing.Size(75, 23);
+            this.btProva.Size = new System.Drawing.Size(79, 45);
             this.btProva.TabIndex = 1;
             this.btProva.Text = "Prova\r\n";
             this.btProva.UseVisualStyleBackColor = true;
@@ -46,20 +47,22 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(166, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(111, 32);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 205);
+            this.dataGridView1.Size = new System.Drawing.Size(313, 133);
             this.dataGridView1.TabIndex = 2;
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btProva);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -37,7 +37,7 @@ namespace ProgettoRDF
 
         private void btProva_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show(LoginInfo.UserID);
         }
     }
 }
