@@ -65,7 +65,7 @@ namespace ProgettoRDF
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
 
-                    MenuForm form2 = new MenuForm(textEmail, textPassword);
+                    MenuForm form2 = new MenuForm(emailIN, passwordIN);
                     form2.ShowDialog();
                     this.Hide();
                 }
