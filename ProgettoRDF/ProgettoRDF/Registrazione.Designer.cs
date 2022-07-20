@@ -129,9 +129,9 @@ namespace ProgettoRDF
             // 
             this.textPassword.Location = new System.Drawing.Point(364, 148);
             this.textPassword.Name = "textPassword";
-            this.textPassword.PasswordChar = '*';
             this.textPassword.Size = new System.Drawing.Size(100, 20);
             this.textPassword.TabIndex = 10;
+            this.textPassword.UseSystemPasswordChar = true;
             // 
             // Registrazione
             // 
