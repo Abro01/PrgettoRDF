@@ -13,7 +13,6 @@ namespace ProgettoRDF
 {
     public partial class Login : Form
     {
-
         myDBconnection con = new myDBconnection();
         MySqlCommand command;
         MySqlDataAdapter da;

@@ -13,14 +13,23 @@ namespace ProgettoRDF
 {
     public partial class MenuForm : Form
     {
+
         public MenuForm()
         {
             InitializeComponent();
+            
         }
 
-        private void btProva_Click(object sender, EventArgs e)
+        private void btnProva_Click(object sender, EventArgs e)
         {
             MessageBox.Show(LoginInfo.UserID);
+        }
+
+        private void btnProfilo_Click(object sender, EventArgs e)
+        {
+            Profilo reg = new Profilo();
+            reg.Show();
+            this.Hide();
         }
     }
 }

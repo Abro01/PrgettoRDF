@@ -28,50 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btProva = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
+            this.btnProva = new System.Windows.Forms.Button();
+            this.btnProfilo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).BeginInit();
             this.SuspendLayout();
             // 
-            // btProva
+            // btnProva
             // 
-            this.btProva.Location = new System.Drawing.Point(225, 211);
-            this.btProva.Margin = new System.Windows.Forms.Padding(2);
-            this.btProva.Name = "btProva";
-            this.btProva.Size = new System.Drawing.Size(79, 45);
-            this.btProva.TabIndex = 1;
-            this.btProva.Text = "Prova\r\n";
-            this.btProva.UseVisualStyleBackColor = true;
-            this.btProva.Click += new System.EventHandler(this.btProva_Click);
+            this.btnProva.Location = new System.Drawing.Point(329, 173);
+            this.btnProva.Name = "btnProva";
+            this.btnProva.Size = new System.Drawing.Size(189, 118);
+            this.btnProva.TabIndex = 1;
+            this.btnProva.Text = "Prova\r\n";
+            this.btnProva.UseVisualStyleBackColor = true;
+            this.btnProva.Click += new System.EventHandler(this.btnProva_Click);
             // 
-            // dataGridView1
+            // btnProfilo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(111, 32);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(313, 133);
-            this.dataGridView1.TabIndex = 2;
+            this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
+            this.btnProfilo.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnProfilo.InitialImage")));
+            this.btnProfilo.Location = new System.Drawing.Point(12, 12);
+            this.btnProfilo.Name = "btnProfilo";
+            this.btnProfilo.Size = new System.Drawing.Size(93, 85);
+            this.btnProfilo.TabIndex = 2;
+            this.btnProfilo.TabStop = false;
+            this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btProva);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.Controls.Add(this.btnProfilo);
+            this.Controls.Add(this.btnProva);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btProva;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnProva;
+        private System.Windows.Forms.PictureBox btnProfilo;
     }
 }
