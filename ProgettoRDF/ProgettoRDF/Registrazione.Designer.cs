@@ -29,32 +29,33 @@ namespace ProgettoRDF
         /// </summary>
         private void InitializeComponent()
         {
-            this.Registrati = new System.Windows.Forms.Button();
+            this.btRegistrazione = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.TextBox();
-            this.nome = new System.Windows.Forms.TextBox();
-            this.cognome = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.textUser = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textNome = new System.Windows.Forms.TextBox();
+            this.textCognome = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Registrati
+            // btRegistrazione
             // 
-            this.Registrati.Location = new System.Drawing.Point(366, 258);
-            this.Registrati.Name = "Registrati";
-            this.Registrati.Size = new System.Drawing.Size(98, 36);
-            this.Registrati.TabIndex = 0;
-            this.Registrati.Text = "Registati";
-            this.Registrati.UseVisualStyleBackColor = true;
+            this.btRegistrazione.Location = new System.Drawing.Point(366, 258);
+            this.btRegistrazione.Name = "btRegistrazione";
+            this.btRegistrazione.Size = new System.Drawing.Size(98, 36);
+            this.btRegistrazione.TabIndex = 0;
+            this.btRegistrazione.Text = "Registati";
+            this.btRegistrazione.UseVisualStyleBackColor = true;
+            this.btRegistrazione.Click += new System.EventHandler(this.btRegistrazione_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(246, 37);
+            this.label1.Location = new System.Drawing.Point(243, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
@@ -96,57 +97,58 @@ namespace ProgettoRDF
             this.label5.TabIndex = 5;
             this.label5.Text = "Password";
             // 
-            // username
+            // textUser
             // 
-            this.username.Location = new System.Drawing.Point(366, 29);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(100, 20);
-            this.username.TabIndex = 6;
+            this.textUser.Location = new System.Drawing.Point(366, 29);
+            this.textUser.Name = "textUser";
+            this.textUser.Size = new System.Drawing.Size(100, 20);
+            this.textUser.TabIndex = 6;
             // 
-            // email
+            // textEmail
             // 
-            this.email.Location = new System.Drawing.Point(366, 62);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(100, 20);
-            this.email.TabIndex = 7;
+            this.textEmail.Location = new System.Drawing.Point(366, 62);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(100, 20);
+            this.textEmail.TabIndex = 7;
             // 
-            // nome
+            // textNome
             // 
-            this.nome.Location = new System.Drawing.Point(366, 90);
-            this.nome.Name = "nome";
-            this.nome.Size = new System.Drawing.Size(100, 20);
-            this.nome.TabIndex = 8;
+            this.textNome.Location = new System.Drawing.Point(366, 90);
+            this.textNome.Name = "textNome";
+            this.textNome.Size = new System.Drawing.Size(100, 20);
+            this.textNome.TabIndex = 8;
             // 
-            // cognome
+            // textCognome
             // 
-            this.cognome.Location = new System.Drawing.Point(366, 117);
-            this.cognome.Name = "cognome";
-            this.cognome.Size = new System.Drawing.Size(100, 20);
-            this.cognome.TabIndex = 9;
+            this.textCognome.Location = new System.Drawing.Point(366, 117);
+            this.textCognome.Name = "textCognome";
+            this.textCognome.Size = new System.Drawing.Size(100, 20);
+            this.textCognome.TabIndex = 9;
             // 
-            // password
+            // textPassword
             // 
-            this.password.Location = new System.Drawing.Point(364, 148);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 20);
-            this.password.TabIndex = 10;
+            this.textPassword.Location = new System.Drawing.Point(364, 148);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
+            this.textPassword.Size = new System.Drawing.Size(100, 20);
+            this.textPassword.TabIndex = 10;
             // 
             // Registrazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.cognome);
-            this.Controls.Add(this.nome);
-            this.Controls.Add(this.email);
-            this.Controls.Add(this.username);
+            this.ClientSize = new System.Drawing.Size(784, 440);
+            this.Controls.Add(this.textPassword);
+            this.Controls.Add(this.textCognome);
+            this.Controls.Add(this.textNome);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.textUser);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Registrati);
+            this.Controls.Add(this.btRegistrazione);
             this.Name = "Registrazione";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,16 +157,16 @@ namespace ProgettoRDF
 
         #endregion
 
-        private System.Windows.Forms.Button Registrati;
+        private System.Windows.Forms.Button btRegistrazione;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox email;
-        private System.Windows.Forms.TextBox nome;
-        private System.Windows.Forms.TextBox cognome;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox textUser;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox textNome;
+        private System.Windows.Forms.TextBox textCognome;
+        private System.Windows.Forms.TextBox textPassword;
     }
 }

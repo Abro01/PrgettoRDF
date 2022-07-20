@@ -55,7 +55,7 @@ namespace ProgettoRDF
                 da.Fill(dt);
                 dataGridView1.DataSource = dt.DefaultView;
                 con.cn.Close();*/
-                string query = "SELECT * FROM utenti WHERE email = '" + textEmail.Text + "' AND password = '" + textPassword.Text + "'";
+                string query = "SELECT * FROM utenti WHERE email = '" + textEmail.Text + "' AND password = MD5('" + textPassword.Text + "')";
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
 
                 sda.Fill(dt);
@@ -64,8 +64,8 @@ namespace ProgettoRDF
                 {
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
-
-                    MenuForm form2 = new MenuForm(textEmail, textPassword);
+                    LoginInfo.UserID = textEmail.Text;
+                    MenuForm form2 = new MenuForm();
                     form2.ShowDialog();
                     this.Hide();
                 }
@@ -87,6 +87,13 @@ namespace ProgettoRDF
             {
                 con.cn.Close();
             }
+        }
+
+        private void btRegistrati_Click(object sender, EventArgs e)
+        {
+            Registrazione reg = new Registrazione();
+            reg.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)
