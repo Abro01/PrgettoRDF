@@ -14,6 +14,12 @@ namespace ProgettoRDF
     public partial class MenuForm : Form
     {
 
+        myDBconnection con = new myDBconnection();
+        MySqlCommand command;
+        MySqlDataAdapter da;
+        DataTable dt = new DataTable();
+        string id;
+
         public MenuForm()
         {
             InitializeComponent();
@@ -25,11 +31,49 @@ namespace ProgettoRDF
             MessageBox.Show(LoginInfo.UserID);
         }
 
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnProfilo_Click(object sender, EventArgs e)
         {
-            Profilo reg = new Profilo();
+            /*;
             reg.Show();
-            this.Hide();
+            this.Hide();*/
+
+            LoginInfo.UserID = id;
+
+            try
+            {
+                con.cn.Open();
+                /*command = new MySqlCommand("Select * from utenti", con.cn);
+                command.ExecuteNonQuery();
+                dt = new DataTable();
+                da = new MySqlDataAdapter(command);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt.DefaultView;
+                con.cn.Close();*/
+                string query = "SELECT * FROM utenti WHERE ID = '" + id + "'";
+                MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+
+                sda.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    Profilo profilo = new Profilo();
+                    profilo.Show();
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.cn.Close();
+            }
         }
     }
 }
