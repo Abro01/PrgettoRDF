@@ -83,7 +83,7 @@ namespace ProgettoRDF
             }
         }
 
-        private void btRegistrati_Click(object sender, EventArgs e)
+        private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Registrazione reg = new Registrazione();
             reg.Show();

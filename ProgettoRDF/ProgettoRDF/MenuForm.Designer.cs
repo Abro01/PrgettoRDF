@@ -40,10 +40,9 @@
             // 
             // btnProva
             // 
-            this.btnProva.Location = new System.Drawing.Point(297, 196);
-            this.btnProva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProva.Location = new System.Drawing.Point(538, 254);
             this.btnProva.Name = "btnProva";
-            this.btnProva.Size = new System.Drawing.Size(126, 77);
+            this.btnProva.Size = new System.Drawing.Size(189, 118);
             this.btnProva.TabIndex = 1;
             this.btnProva.Text = "Prova\r\n";
             this.btnProva.UseVisualStyleBackColor = true;
@@ -52,10 +51,9 @@
             // btnProfilo
             // 
             this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
-            this.btnProfilo.Location = new System.Drawing.Point(82, 8);
-            this.btnProfilo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProfilo.Location = new System.Drawing.Point(123, 12);
             this.btnProfilo.Name = "btnProfilo";
-            this.btnProfilo.Size = new System.Drawing.Size(60, 62);
+            this.btnProfilo.Size = new System.Drawing.Size(90, 90);
             this.btnProfilo.TabIndex = 2;
             this.btnProfilo.TabStop = false;
             this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
@@ -63,33 +61,31 @@
             // btnHome
             // 
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(8, 8);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Location = new System.Drawing.Point(12, 12);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(70, 65);
+            this.btnHome.Size = new System.Drawing.Size(94, 90);
             this.btnHome.TabIndex = 3;
             this.btnHome.TabStop = false;
             // 
             // btnLogout
             // 
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(786, 8);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Location = new System.Drawing.Point(1176, 12);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(56, 65);
+            this.btnLogout.Size = new System.Drawing.Size(90, 90);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 419);
+            this.ClientSize = new System.Drawing.Size(1278, 645);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnProfilo);
             this.Controls.Add(this.btnProva);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
