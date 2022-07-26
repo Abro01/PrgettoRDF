@@ -14,12 +14,37 @@ namespace ProgettoRDF
     public partial class Profilo : Form
     {
         myDBconnection con = new myDBconnection();
+        DataTable dt = new DataTable();
+
         public Profilo()
         {
             InitializeComponent();
+            con.Connect();
+        }
+
+        private void Profilo_Load(object sender, EventArgs e)
+        {
             con.cn.Open();
-            string query = "SELECT * FROM utenti WHERE email = '" + LoginInfo.UserID + "'";
-            MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+            try
+            {
+                string query = "SELECT * FROM utenti WHERE email = '" + LoginInfo.UserID + "'";
+               
+                MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
+                sda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.cn.Close();
+            }
+
+            lUsername.Text = dt.Rows[0]["Username"].ToString();
+            lEmail.Text = dt.Rows[0]["Email"].ToString();
+            lNome.Text = dt.Rows[0]["Nome"].ToString();
+            lCognome.Text = dt.Rows[0]["Cognome"].ToString();
         }
     }
 }

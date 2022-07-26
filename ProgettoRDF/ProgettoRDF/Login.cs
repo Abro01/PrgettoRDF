@@ -26,11 +26,6 @@ namespace ProgettoRDF
             con.Connect();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Clear_Click(object sender, EventArgs e)
         {
             textEmail.Clear();

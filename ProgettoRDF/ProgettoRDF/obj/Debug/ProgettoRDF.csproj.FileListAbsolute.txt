@@ -25,3 +25,4 @@ C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\
 C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuForm.resources
 C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.MenuForm.resources
 C:\Users\andre\OneDrive\Documenti\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Profilo.resources
+C:\Users\Ale\Documents\GitHub\PrgettoRDF\ProgettoRDF\ProgettoRDF\obj\Debug\ProgettoRDF.Profilo.resources

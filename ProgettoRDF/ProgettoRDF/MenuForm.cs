@@ -29,6 +29,7 @@ namespace ProgettoRDF
         private void btnProva_Click(object sender, EventArgs e)
         {
             MessageBox.Show(LoginInfo.UserID);
+            
         }
 
         private void MenuForm_Load(object sender, EventArgs e)
@@ -42,8 +43,11 @@ namespace ProgettoRDF
             reg.Show();
             this.Hide();*/
 
-            LoginInfo.UserID = id;
+            Profilo profilo = new Profilo();
+            profilo.Show();
+            this.Hide();
 
+            /*
             try
             {
                 con.cn.Open();
@@ -53,7 +57,7 @@ namespace ProgettoRDF
                 da = new MySqlDataAdapter(command);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt.DefaultView;
-                con.cn.Close();*/
+                con.cn.Close()
                 string query = "SELECT * FROM utenti WHERE ID = '" + id + "'";
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
 
@@ -61,9 +65,7 @@ namespace ProgettoRDF
 
                 if (dt.Rows.Count > 0)
                 {
-                    Profilo profilo = new Profilo();
-                    profilo.Show();
-                    this.Hide();
+                    
                 }
             }
             catch (Exception ex)
@@ -74,6 +76,7 @@ namespace ProgettoRDF
             {
                 con.cn.Close();
             }
+                */
         }
     }
 }
