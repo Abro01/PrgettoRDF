@@ -23,7 +23,7 @@ namespace ProgettoRDF
             con.Connect();
         }
 
-        private void btRegistrazione_Click(object sender, EventArgs e)
+        private void btnRegistrazione_Click(object sender, EventArgs e)
         {
             //Controllo che  tutti i campi siano compilati
             if ((String.IsNullOrEmpty(textEmail.Text)) || (String.IsNullOrEmpty(textPassword.Text)) || (String.IsNullOrEmpty(textNome.Text)) || (String.IsNullOrEmpty(textCognome.Text)) || (String.IsNullOrEmpty(textUser.Text)))
@@ -59,10 +59,24 @@ namespace ProgettoRDF
                     con.cn.Close();
                 }
             }
-            
+        }
 
-            
-           
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textEmail.Clear();
+            textPassword.Clear();
+
+            textEmail.Focus();
         }
     }
 }

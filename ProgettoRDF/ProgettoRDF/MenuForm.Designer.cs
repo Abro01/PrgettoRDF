@@ -51,9 +51,9 @@
             // btnProfilo
             // 
             this.btnProfilo.Image = ((System.Drawing.Image)(resources.GetObject("btnProfilo.Image")));
-            this.btnProfilo.Location = new System.Drawing.Point(123, 12);
+            this.btnProfilo.Location = new System.Drawing.Point(58, 12);
             this.btnProfilo.Name = "btnProfilo";
-            this.btnProfilo.Size = new System.Drawing.Size(90, 90);
+            this.btnProfilo.Size = new System.Drawing.Size(49, 50);
             this.btnProfilo.TabIndex = 2;
             this.btnProfilo.TabStop = false;
             this.btnProfilo.Click += new System.EventHandler(this.btnProfilo_Click);
@@ -63,16 +63,16 @@
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(12, 12);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(94, 90);
+            this.btnHome.Size = new System.Drawing.Size(40, 50);
             this.btnHome.TabIndex = 3;
             this.btnHome.TabStop = false;
             // 
             // btnLogout
             // 
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(1176, 12);
+            this.btnLogout.Location = new System.Drawing.Point(1224, 12);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(90, 90);
+            this.btnLogout.Size = new System.Drawing.Size(42, 50);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -81,6 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1278, 645);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnHome);

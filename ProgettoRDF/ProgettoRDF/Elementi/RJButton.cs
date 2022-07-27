@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.ComponentModel;
 
 namespace ProgettoRDF.Elementi
 {
@@ -15,6 +16,65 @@ namespace ProgettoRDF.Elementi
         private int size_bordo = 0;
         private int radius_bordo = 40;
         private Color colore_bordo = Color.PaleVioletRed;
+
+        [Category("RJ Code Advance")]
+        public int Size_bordo
+        {
+            get
+            {
+                return size_bordo;
+            }
+
+            set
+            {
+                size_bordo = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("RJ Code Advance")]
+        public int Radius_bordo
+        {
+            get
+            {
+                return radius_bordo;
+            }
+
+            set
+            {
+                radius_bordo = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("RJ Code Advance")]
+        public Color Colore_bordo
+        {
+            get
+            {
+                return colore_bordo;
+            }
+
+            set
+            {
+                colore_bordo = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("RJ Code Advance")]
+        public Color BackgroundColor
+        {
+            get { return this.BackColor; }
+            set { this.BackColor = value; }
+        }
+
+        [Category("RJ Code Advance")]
+        public Color TextColor
+        {
+            get { return this.ForeColor; }
+            set { this.ForeColor = value; }
+        }
 
         public RJButton()
         {

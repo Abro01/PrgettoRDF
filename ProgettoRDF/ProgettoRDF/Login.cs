@@ -26,15 +26,17 @@ namespace ProgettoRDF
             con.Connect();
         }
 
-        private void Clear_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            textEmail.Clear();
-            textPassword.Clear();
-
-            textEmail.Focus();
+            DialogResult res;
+            res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
-        private void Accedi_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             emailIN = textEmail.Text;
             passwordIN = textPassword.Text;
@@ -83,6 +85,14 @@ namespace ProgettoRDF
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            textEmail.Clear();
+            textPassword.Clear();
+
+            textEmail.Focus();
+        }
+
         private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Registrazione reg = new Registrazione();
@@ -90,14 +100,5 @@ namespace ProgettoRDF
             this.Hide();
         }
 
-        private void Exit_Click(object sender, EventArgs e)
-        {
-            DialogResult res;
-            res = MessageBox.Show("Vuoi uscire?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
     }
 }
