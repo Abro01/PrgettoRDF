@@ -90,6 +90,14 @@ namespace ProgettoRDF
             textEmail.Focus();
         }
 
+        private void textPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue == 13)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
         private void lnkRegistrazione_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Registrazione reg = new Registrazione();
