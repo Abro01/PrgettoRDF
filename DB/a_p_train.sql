@@ -7,6 +7,15 @@ CREATE TABLE utenti (
     PRIMARY KEY (ID)
 );
 
+CREATE TABLE tratte(
+    ID int NOT NULL AUTO_INCREMENT,
+    Partenza varchar(20) NOT NULL,
+    Arrivo varchar(20) NOT NULL,
+    Orario TIME NOT NULL,
+    Data DATE NOT NULL,
+    PRIMARY KEY(ID)
+);
+
 CREATE TABLE treni(
     ID int NOT NULL AUTO_INCREMENT,
     Modello varchar(20) NOT NULL,
@@ -23,15 +32,6 @@ CREATE TABLE biglietti(
     CODTratta int NOT NULL,
     PRIMARY KEY(ID),
     FOREIGN KEY(CODTratta) REFERENCES tratte(ID)
-);
-
-CREATE TABLE tratte(
-    ID int NOT NULL AUTO_INCREMENT,
-    Partenza varchar(20) NOT NULL,
-    Arrivo varchar(20) NOT NULL,
-    Orario TIME NOT NULL,
-    Data DATE NOT NULL,
-    PRIMARY KEY(ID)
 );
 
 CREATE TABLE fermate(
