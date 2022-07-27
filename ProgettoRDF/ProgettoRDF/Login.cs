@@ -38,9 +38,6 @@ namespace ProgettoRDF
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            emailIN = textEmail.Text;
-            passwordIN = textPassword.Text;
-
             try
             {
                 con.cn.Open();
@@ -51,7 +48,7 @@ namespace ProgettoRDF
                 da.Fill(dt);
                 dataGridView1.DataSource = dt.DefaultView;
                 con.cn.Close();*/
-                string query = "SELECT * FROM utenti WHERE email = '" + textEmail.Text + "' AND password = MD5('" + textPassword.Text + "')";
+                string query = "SELECT * FROM utenti WHERE Email = '" + textEmail.Text + "' AND Password = MD5('" + textPassword.Text + "')";
                 MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
 
                 sda.Fill(dt);
