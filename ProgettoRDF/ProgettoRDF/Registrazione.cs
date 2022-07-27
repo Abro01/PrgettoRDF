@@ -78,5 +78,11 @@ namespace ProgettoRDF
 
             textEmail.Focus();
         }
+
+        private void textPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+                btnRegistrazione.PerformClick();
+        }
     }
 }
