@@ -23,60 +23,20 @@ namespace ProgettoRDF
         public MenuForm()
         {
             InitializeComponent();
-            
-        }
-
-        private void btnProva_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(LoginInfo.UserID);
-            
+            con.Connect();
         }
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-
+            con.cn.Open();
+            ricercaTratte("", "");
         }
 
         private void btnProfilo_Click(object sender, EventArgs e)
         {
-            /*;
-            reg.Show();
-            this.Hide();*/
-
             Profilo profilo = new Profilo();
             profilo.Show();
             this.Hide();
-
-            /*
-            try
-            {
-                con.cn.Open();
-                /*command = new MySqlCommand("Select * from utenti", con.cn);
-                command.ExecuteNonQuery();
-                dt = new DataTable();
-                da = new MySqlDataAdapter(command);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt.DefaultView;
-                con.cn.Close()
-                string query = "SELECT * FROM utenti WHERE ID = '" + id + "'";
-                MySqlDataAdapter sda = new MySqlDataAdapter(query, con.cn);
-
-                sda.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.cn.Close();
-            }
-                */
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -85,6 +45,28 @@ namespace ProgettoRDF
             logout.Show();
             this.Hide();
             con.cn.Close();
+        }
+
+        private void btnRicerca_Click(object sender, EventArgs e)
+        {
+            string partenza = txtPartenza.Text.ToString();
+            string arrivo = txtArrivo.Text.ToString();
+
+            ricercaTratte(partenza, arrivo);
+        }
+
+        public void ricercaTratte(string partenza, string arrivo)
+        {
+            string query = "SELECT t.* " +
+                           "FROM tratte t, tratte_fermate tf, treni tr, fermate f " +
+                           "WHERE tr.CODTratta=t.ID AND t.ID=tf.CODTratta AND tf.CODFermata=f.ID " +
+                           "AND t.Partenza = '" + partenza + "' AND t.Arrivo = '" + arrivo + "'";
+
+            command = new MySqlCommand(query, con.cn);
+            da = new MySqlDataAdapter(command);
+            da.Fill(dt);
+
+            dtRisultati.DataSource = dt;
         }
     }
 }
