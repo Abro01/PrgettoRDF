@@ -70,7 +70,7 @@ namespace ProgettoRDF
                 Application.Exit();
             }
         }
-
+        //Cancella i caratteri nelle textbox per permettere di effettuare una nuova registrazione
         private void btnClear_Click(object sender, EventArgs e)
         {
             textEmail.Clear();
@@ -78,7 +78,7 @@ namespace ProgettoRDF
 
             textEmail.Focus();
         }
-
+        //Permette di effettuare la registrazione premendo il tasto invio
         private void textPassword_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13)

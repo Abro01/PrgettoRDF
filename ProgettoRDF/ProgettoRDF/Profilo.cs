@@ -46,5 +46,26 @@ namespace ProgettoRDF
             lNome.Text = dt.Rows[0]["Nome"].ToString();
             lCognome.Text = dt.Rows[0]["Cognome"].ToString();
         }
+
+        private void btnProfilo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login logout = new Login();
+            logout.Show();
+            this.Hide();
+            con.cn.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            MenuForm home = new MenuForm();
+            home.ShowDialog();
+            this.Hide();
+            con.cn.Close();
+        }
     }
 }

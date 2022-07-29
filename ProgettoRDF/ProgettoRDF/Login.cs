@@ -58,8 +58,8 @@ namespace ProgettoRDF
                     emailIN = textEmail.Text;
                     passwordIN = textPassword.Text;
                     LoginInfo.UserID = textEmail.Text;
-                    MenuForm form2 = new MenuForm();
-                    form2.ShowDialog();
+                    MenuForm home = new MenuForm();
+                    home.ShowDialog();
                     this.Hide();
                 }
                 else
@@ -81,7 +81,7 @@ namespace ProgettoRDF
                 con.cn.Close();
             }
         }
-
+        //Cancella i caratteri nelle textbox per permettere di effettuare un nuovo accesso
         private void btnClear_Click(object sender, EventArgs e)
         {
             textEmail.Clear();
@@ -89,7 +89,7 @@ namespace ProgettoRDF
 
             textEmail.Focus();
         }
-
+        //Permette il login con l'invio 
         private void textPassword_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 13)
